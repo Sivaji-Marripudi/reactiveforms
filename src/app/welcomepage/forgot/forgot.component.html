@@ -1,0 +1,25 @@
+<div class="background">
+    <mat-card>
+        <form [formGroup]="forgotForm">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <img src="../../../assets/download.png">
+                <h1>FORGOT PAGE</h1>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" 
+                        autocomplete="off"
+                        required
+                        formControlName="email">
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-error *ngIf="forgotForm.get('email').touched && forgotForm.get('email').hasError('required')">
+                        Email is required
+                    </mat-error>
+                    <mat-error *ngIf="forgotForm.get('email').touched && forgotForm.get('email').hasError('email')">
+                        Enter valid email
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" [disabled]="!forgotForm.valid">forgot password</button>
+            </div>
+        </form>
+    </mat-card>  
+</div>

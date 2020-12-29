@@ -1,0 +1,27 @@
+.background{
+    background-image: url(src/assets/background1.jpg);
+    background-size:cover;
+    height: 100vh;
+    
+}
+img{
+    height: 110px;
+    width: 130px;
+}
+h1{
+    font-weight: bold;
+}
+mat-card{
+    height: auto;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+mat-form-field{
+    width: 80%;
+}
+button{
+    outline: none;
+    width: 80%;
+}

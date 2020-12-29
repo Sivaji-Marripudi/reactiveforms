@@ -1,0 +1,39 @@
+.background{
+    background-image: url(src/assets/background1.jpg);
+    background-size:cover;
+    height: 100vh;
+    
+}
+mat-card{
+    height: 95%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+h1{
+    font-weight: bold;
+}
+img{
+    height: 110px;
+    width: 130px;
+}
+mat-form-field{
+    width: 80%;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+button{
+    outline: none;
+    width: 80%;
+}
+span{
+    margin: 15px 0px 15px 0px;
+}
+.btn-success{
+    margin-top: 10px;
+}

@@ -1,0 +1,11 @@
+mat-toolbar button{
+    outline: none;
+}
+mat-sidenav-container{
+    height: 90vh;
+    width: 100%;
+}
+mat-sidenav{
+    width: 20%;
+    background-color: grey;
+}
