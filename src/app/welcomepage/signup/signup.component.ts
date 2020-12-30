@@ -21,12 +21,16 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.signupForm.statusChanges.subscribe(data => {
+      console.log(data);
+    })
   }
   postData(){
     if(this.signupForm.valid){
       console.log(this.signupForm.value);
     }
   }
+  
   
 
 }

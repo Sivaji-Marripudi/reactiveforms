@@ -24,9 +24,12 @@
                         formControlName='password'
                         required
                         autocomplete="off">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
+                    <mat-icon matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" 
+                        [attr.aria-pressed]="hide"
+                        style="cursor: pointer;">
+                     {{hide ? 'visibility_off' : 'visibility'}}
+                    </mat-icon>
                     <mat-error *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
                         Password is required
                     </mat-error>

@@ -6,11 +6,37 @@
         <button mat-raised-button (click)="gotoPage()">Logout</button>
     </div>
 </mat-toolbar>
-<mat-sidenav-container>
+<!-- <mat-sidenav-container>
     <mat-sidenav mode="side" opened="true">
         side navbar
     </mat-sidenav>
     <mat-sidenav-content>
-        side nav content
     </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+<!-- <p>order : {{orderstatus}}</p> -->
+
+<div class="container">
+    <ul *ngFor="let contact of contactsList">
+        <li>{{contact.firstName}}</li>
+    </ul>
+</div>
+<div class="container">
+    <mat-card>
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit(postForm)">
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input matInput required formControlName="id">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline">
+                <mat-label>firstName</mat-label>
+                <input matInput  formControlName="firstName" required>
+            </mat-form-field><br>
+            <mat-form-field appearance="outline">
+                <mat-label>LastName</mat-label>
+                <input matInput  formControlName="lastName" required>
+            </mat-form-field><br>
+            <button mat-raised-button color="primary">post data</button>
+        </form>    
+    </mat-card>
+</div>

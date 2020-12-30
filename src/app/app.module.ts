@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomepageModule } from './welcomepage/welcomepage.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,WelcomepageModule,FlexLayoutModule
+    BrowserAnimationsModule,WelcomepageModule,FlexLayoutModule,HttpClientModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
